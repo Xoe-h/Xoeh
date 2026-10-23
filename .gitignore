@@ -1,37 +1,203 @@
-# Windows
+# ============================================================
+#  Xoeh - .gitignore
+#  规则：只保留源码与配置，其余一律排除
+#  说明：如需强制提交被忽略的文件，用 git add -f <文件>
+# ============================================================
+
+# ---------- 操作系统 ----------
 Thumbs.db
 ehthumbs.db
+ehthumbs_vista.db
 Desktop.ini
+desktop.ini
 $RECYCLE.BIN/
 *.lnk
-
-# macOS
+*.stackdump
+.directory
+.Spotlight-V100
+.Trashes
 .DS_Store
+._*
+Icon?
+.nfs*
 
-# 编辑器 / IDE
+# ---------- 编辑器 / IDE ----------
 .vscode/
 .idea/
+*.iml
+*.ipr
+*.iws
 *.swp
 *.swo
+*.swn
+*~
+\#*\#
+.\#*
+*.sublime-workspace
+*.sublime-project
+nbproject/
+.project
+.classpath
+.settings/
+*.code-workspace
+.vim/
 
-# 日志与临时文件
-*.log
-*.tmp
-*.bak
-
-# Node.js
+# ---------- 依赖 / 包缓存 ----------
 node_modules/
+.pnpm-store/
+.yarn/
+bower_components/
+jspm_packages/
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+*.egg-info/
+.eggs/
+.cache/
+.parcel-cache/
+.turbo/
+.eslintcache
+.stylelintcache
+.gradle/
+build/
+target/
+obj/
+out/
+dist/
+.next/
+.nuxt/
+.svelte-kit/
+.angular/
+coverage/
+.nyc_output/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.lcov
+
+# ---------- 编译产物 / 二进制 ----------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.class
+*.pyc
+*.pyo
+*.pyd
+*.wasm
+*.bin
+*.elf
+*.map
+*.min.js.map
+*.min.css.map
+
+# ---------- 日志 / 临时文件 ----------
+*.log
+logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-.pnpm-store/
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+*.pid
+*.seed
+*.pid.lock
+*.swp
+core
+core.[0-9]*
+hs_err_pid*
+*.hprof
+*.stackdump
 
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
-.pytest_cache/
-.mypy_cache/
+# ---------- 环境变量 / 密钥 / 证书（务必排除）----------
+.env
+.env.*
+!.env.example
+!.env.template
+*.env
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+*.crt
+*.cer
+*.der
+*.csr
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+secrets.json
+secret.json
+credentials.json
+credentials.*.json
+service-account*.json
+.npmrc
+.yarnrc
+.pypirc
+.authinfo
+
+# ---------- 归档 / 大文件 ----------
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.bz2
+*.xz
+*.iso
+*.dmg
+*.img
+*.vhd
+*.vhdx
+
+# ---------- 数据库 / 转储 ----------
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+*.dump
+*.sql.gz
+
+# ---------- 本地覆盖 / 个人配置 ----------
+*.local
+local.properties
+*.local.*
+.DS_Store
+*.todo
+TODO.local.md
+
+# ---------- 日志收集 / 运行时目录 ----------
+tmp/
+temp/
+run/
+runtime/
+.pids/
